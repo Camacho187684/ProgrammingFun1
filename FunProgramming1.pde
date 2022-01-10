@@ -1,34 +1,12 @@
-float r = 0;
-
-void setup() {
-  size(400, 400);
-  background(255);
-  noStroke();
-  fill(0);
-  rectMode(CENTER);
+void setup(){
+ size(300,300);
+ background(#047AC1);
+ noFill();
 }
-void draw() {
-  background(255);
 
-  translate(100, 100);
-  rotate(r);
-  rect(0, 0, 80, 80);
-  resetMatrix();
-
-  translate(300, 100);
-  rotate(r);
-  rect(0, 0, 80, 80);
-  resetMatrix();
-
-  translate(100, 300);
-  rotate(r);
-  rect(0, 0, 80, 80);
-  resetMatrix();
-
-  translate(300, 300);
-  rotate(r);
-  rect(0, 0, 80, 80);
-  resetMatrix();
-
-  r = r + 0.02;
-}
+ void draw(){
+   strokeWeight(random(3,10));
+   stroke(random(255),random(255),random(255));
+   float rainbow_size=random(200,270);
+  ellipse(150,350,rainbow_size,rainbow_size); 
+ }
